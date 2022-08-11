@@ -1,5 +1,3 @@
-from optparse import Option
-
 
 lista = []
 alumnos = 0
@@ -7,9 +5,9 @@ while alumnos <=10:
     opcion = input("Agregar alumno (1) o Terminar (2): ")
     if opcion == '1':
         nombre = input('Ingrese el nombre del alumno: ').capitalize()
-        calif1 = int(input(f'Ingrese la primer calificación de {nombre}:'))
-        calif2 = int(input(f'Ingrese la segunda calificación de {nombre}:'))
-        calif3 = int(input(f'Ingrese la tercer calificación de {nombre}:'))
+        calif1 = int(input(f'Ingrese la primer calificación de {nombre}: '))
+        calif2 = int(input(f'Ingrese la segunda calificación de {nombre}: '))
+        calif3 = int(input(f'Ingrese la tercer calificación de {nombre}: '))
         cal = [int(calif1), int(calif2),int(calif3)]
         promCal = sum(cal)/float(len(cal))
         alumno = [nombre, promCal]
@@ -21,6 +19,6 @@ while alumnos <=10:
     else:
         print('Opción inválida')
         continue 
-print('Esta es la lista de promedios por alumno: ')
+print('Esta es la lista de alumnos y su promedio: ')
 for i in lista:
     print(i, end='')
